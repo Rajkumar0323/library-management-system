@@ -53,6 +53,12 @@
         input[type="submit"]:hover {
             background-color: #45a049;
         }
+        .back-button {
+            text-decoration: none;
+            color: #171c17;
+            font-weight: bold;
+            font-size: 30px;
+        }
     </style>
     </style>
 </head>
@@ -60,7 +66,7 @@
 <body>
 
     <div class="container">
-        <p><a href="{% url 'book_list' %}">X</a></p>
+        <p><a class="back-button" href="{% url 'book_list' %}">←</a></p>
         <h2>Add Book</h2>
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}

@@ -110,7 +110,7 @@ def add_borrower(request):
 
     return render(request, 'app/showed_borrowed_mgmt.html', {"books": books, "borrows": borrows})
 
-@login_required(login_url="index")
+# @login_required(login_url="index")
 def calculate_fine(borrow_date):
     fine_per_day = 5
     days_difference = (date.today() - borrow_date).days
